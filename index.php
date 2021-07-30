@@ -52,6 +52,7 @@ Loop::addSignal(SIGINT, $func = function ($signal) use (&$func, $socket) {
     echo sprintf('Signal: %s' . PHP_EOL, $signal);
     Loop::removeSignal(SIGINT, $func);
     $socket->close();
+    exit();
 });
 
 echo 'Listening for SIGINT. Use "kill -SIGINT ' . getmypid() . '" or CTRL+C' . PHP_EOL;
