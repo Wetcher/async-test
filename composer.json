@@ -1,0 +1,6 @@
+{
+    "name": "root/app",
+    "require": {
+        "react/react": "^1.2"
+    }
+}
